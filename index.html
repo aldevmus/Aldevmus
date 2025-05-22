@@ -1,137 +1,96 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html><html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
-  <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/565/565547.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Outfit:wght@600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #f4f7fa, #e2ecf4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
+    * {
       box-sizing: border-box;
-    }
+      margin: 0;
+      padding: 0;
+    }body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #c2e9fb, #f9f9f9, #a1c4fd);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
 
-    .glass-card {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 20px;
-      padding: 40px 30px;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
+.glass-card {
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      animation: slideUp 1s ease-out;
-    }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #222;
+  animation: slideUp 1s ease-out;
+}
 
-    p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      animation: slideUp 1s ease-out 0.3s;
-      animation-fill-mode: both;
-    }
+p {
+  font-size: 1.2rem;
+  color: #444;
+  opacity: 0.85;
+  animation: slideUp 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
 
-    .dots {
-      margin-top: 30px;
-      display: flex;
-      gap: 10px;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      background-color: #555;
-      border-radius: 50%;
-      animation: bounce 1.4s infinite ease-in-out;
-    }
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
+@media (max-width: 768px) {
+  .glass-card {
+    height: auto;
+    padding: 20px;
+  }
 
-    .social {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    .social a {
-      text-decoration: none;
-      color: #444;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
+  p {
+    font-size: 1rem;
+  }
+}
 
-    .social a:hover {
-      color: #0077cc;
-    }
-
-    @keyframes bounce {
-      0%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-8px); }
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @keyframes slideUp {
-      from {transform: translateY(20px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    @media (max-width: 600px) {
-      .glass-card {
-        padding: 30px 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="glass-card" id="content">
+  <div class="glass-card">
     <h1 id="title">Coming Soon</h1>
-    <p id="desc">This site is under development</p>
-    <div class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-    <div class="social">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-      <a href="mailto:contact@example.com">Email</a>
-    </div>
-  </div>
-
-  <script>
+    <p id="desc">This website is under construction</p>
+  </div>  <script>
     const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
     if (lang.startsWith('ar')) {
       document.documentElement.lang = 'ar';
       document.documentElement.dir = 'rtl';
       document.body.style.fontFamily = "'Cairo', sans-serif";
       document.getElementById('title').textContent = 'قريبًا';
-      document.getElementById('desc').textContent = 'الموقع قيد التطوير حالياً';
+      document.getElementById('desc').textContent = 'الموقع قيد الإنشاء حالياً';
     }
-  </script>
-</body>
+  </script></body>
 </html>

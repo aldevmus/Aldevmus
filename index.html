@@ -1,116 +1,80 @@
-<!DOCTYPE html><html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-      const lang = navigator.language || navigator.userLanguage;
-      if (lang.startsWith("ar")) {
-        document.documentElement.lang = "ar";
-        document.documentElement.dir = "rtl";
-      }
-    </script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Outfit', sans-serif;
-        background: linear-gradient(135deg, #dbeafe, #f0f9ff);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        color: #1f2937;
-      }html[lang="ar"] body {
-    font-family: 'Cairo', sans-serif;
-  }
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قريبًا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/565/565547.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 5vh;
+    }.card {
+  width: 80vw;
+  height: 80vh;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #1e293b;
+}
 
-  .glass {
-    width: 90%;
-    max-width: 600px;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeInUp 1s ease forwards;
-  }
+.icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+.soon {
+  font-size: 2rem;
+  font-weight: 700;
+}
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+.dots::after {
+  content: '.';
+  animation: dots 1.5s steps(3, end) infinite;
+}
 
-  p {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-  }
+@keyframes dots {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
+  100% { content: '.'; }
+}
 
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
-  }
+.social {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
 
-  .social-icons a {
-    color: #1f2937;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.social a {
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
 
-  .social-icons a:hover {
-    color: #2563eb;
-  }
-
-  @media (max-width: 640px) {
-    .glass {
-      padding: 1.5rem;
-    }
-    h1 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 0.95rem;
-    }
-  }
-</style>
-
-  </head>
-  <body>
-    <div class="glass">
-      <h1 id="main-text">Coming Soon</h1>
-      <p id="desc-text">We're working hard to launch our new website.</p>
-      <div class="social-icons">
-        <a href="#"><i data-feather="github"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="mail"></i></a>
-      </div>
-    </div>
-    <script>
-      feather.replace();
-      const lang = navigator.language || navigator.userLanguage;
-      if (lang.startsWith("ar")) {
-        document.getElementById("main-text").textContent = "قريبًا";
-        document.getElementById("desc-text").textContent = "نحن نعمل على إطلاق موقعنا الجديد قريبًا.";
-      } else if (lang.startsWith("fr")) {
-        document.getElementById("main-text").textContent = "Bientôt Disponible";
-        document.getElementById("desc-text").textContent = "Nous travaillons dur pour lancer notre nouveau site web.";
-      }
-    </script>
-  </body>
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="icon">
+    <div class="soon">قريبًا<span class="dots"></span></div>
+  </div>  <div class="social">
+    <a href="#">تويتر</a>
+    <a href="#">انستغرام</a>
+    <a href="#">فيسبوك</a>
+  </div>
+</body>
 </html>

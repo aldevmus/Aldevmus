@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>قريباً</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22black%22><path d='M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm9 5v8H6v-8h12z'/></svg>" type="image/svg+xml" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
@@ -28,8 +28,6 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08); /* ظل خفيف غير مسقط */
-      border: 2px solid #3b3b3b; /* بورد ظاهر بلون #3b */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -38,6 +36,8 @@
       box-sizing: border-box;
       text-align: center;
       color: #0d1a26;
+      border: 2px solid rgba(51, 51, 51, 0.3); /* بورد ناعم بلون #3b تقريبي */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* ظل خفيف موزّع */
     }
 
     .icon-lock {

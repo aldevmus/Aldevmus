@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>قريباً</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قريباً</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
-  html, body {
-    margin: 0; padding: 0; height: 100%;
-    font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #90caf9, #a5d8ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    direction: rtl;
-    overflow: hidden;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* يمنع السكروول تماماً */
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #90caf9, #a5d8ff); /* خلفية ناعمة */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      direction: rtl;
+    }
 
-  .card {
-    width: 80vw;
-    height: 80vh;
-    background: rgba(255 255 255 / 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 2px solid #3b;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* ظل خفيف ناعم موزّع */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box;
-    margin: auto;
-    text-align: center;
-    color: #0d1a26;
-  }
+    .card {
+      width: 80vw;
+      height: 80vh;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08); /* ظل خفيف غير مسقط */
+      border: 2px solid #3b3b3b; /* بورد ظاهر بلون #3b */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      text-align: center;
+      color: #0d1a26;
+    }
 
-  .icon-lock {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1rem;
-    fill: #0d1a26;
-  }
+    .icon-lock {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+      fill: #0d1a26;
+    }
 
-  h1 {
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
-    font-weight: 700;
-  }
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+    }
 
-  .coming-soon {
-    font-size: 1.5rem;
-    position: relative;
-    display: inline-block;
-  }
+    .coming-soon {
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
 
-  .dots {
-    display: inline-block;
-    margin-left: 0.5rem;
-  }
+    .dots {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
 
-  .dots span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 3px;
-    background: rgba(13, 26, 38, 0.6);
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: blink 1.5s infinite;
-  }
-
-  .dots span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .dots span:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  .dots span:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  @keyframes blink {
-    0%, 80%, 100% {
+    .dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+      background: rgba(13, 26, 38, 0.6);
+      border-radius: 50%;
       opacity: 0.3;
-      transform: translateY(0);
+      animation: blink 1.5s infinite;
     }
-    40% {
-      opacity: 1;
-      transform: translateY(-6px);
+
+    .dots span:nth-child(1) { animation-delay: 0s; }
+    .dots span:nth-child(2) { animation-delay: 0.3s; }
+    .dots span:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes blink {
+      0%, 80%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+      }
+      40% {
+        opacity: 1;
+        transform: translateY(-6px);
+      }
     }
-  }
-</style>
+  </style>
 </head>
 <body>
-
   <div class="card">
-    <!-- أيقونة القفل -->
-    <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <!-- أيقونة القفل السوداء -->
+    <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm9 5v8H6v-8h12z"/>
     </svg>
 
@@ -111,6 +106,5 @@
       </span>
     </div>
   </div>
-
 </body>
 </html>

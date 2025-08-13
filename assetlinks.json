@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.meding.aldevmus",
+      "sha256_cert_fingerprints": [
+        "ضع_بصمة_SHA-256_الصحيحة_هنا"
+      ]
+    }
+  }
+]
